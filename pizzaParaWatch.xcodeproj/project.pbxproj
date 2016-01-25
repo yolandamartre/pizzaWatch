@@ -19,6 +19,11 @@
 		B76963951C42DB5A00BE2018 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963941C42DB5A00BE2018 /* InterfaceController.swift */; };
 		B76963971C42DB5A00BE2018 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963961C42DB5A00BE2018 /* ExtensionDelegate.swift */; };
 		B76963991C42DB5A00BE2018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76963981C42DB5A00BE2018 /* Assets.xcassets */; };
+		B76963A91C43096500BE2018 /* DatosPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963A81C43096500BE2018 /* DatosPizza.swift */; };
+		B76963AB1C430AA000BE2018 /* TipoMasaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963AA1C430A9F00BE2018 /* TipoMasaInterfaceController.swift */; };
+		B76963AD1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963AC1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift */; };
+		B76963AF1C430B2E00BE2018 /* IngredientesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963AE1C430B2E00BE2018 /* IngredientesInterfaceController.swift */; };
+		B76963B11C430B4300BE2018 /* ResumenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963B01C430B4300BE2018 /* ResumenInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,11 @@
 		B76963961C42DB5A00BE2018 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B76963981C42DB5A00BE2018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B769639A1C42DB5A00BE2018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76963A81C43096500BE2018 /* DatosPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosPizza.swift; sourceTree = "<group>"; };
+		B76963AA1C430A9F00BE2018 /* TipoMasaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipoMasaInterfaceController.swift; path = "../pizzaParaWatch WatchKit App/TipoMasaInterfaceController.swift"; sourceTree = "<group>"; };
+		B76963AC1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoQuesoInterfaceController.swift; sourceTree = "<group>"; };
+		B76963AE1C430B2E00BE2018 /* IngredientesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesInterfaceController.swift; sourceTree = "<group>"; };
+		B76963B01C430B4300BE2018 /* ResumenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +157,12 @@
 			isa = PBXGroup;
 			children = (
 				B76963941C42DB5A00BE2018 /* InterfaceController.swift */,
+				B76963A81C43096500BE2018 /* DatosPizza.swift */,
 				B76963961C42DB5A00BE2018 /* ExtensionDelegate.swift */,
+				B76963AA1C430A9F00BE2018 /* TipoMasaInterfaceController.swift */,
+				B76963AC1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift */,
+				B76963AE1C430B2E00BE2018 /* IngredientesInterfaceController.swift */,
+				B76963B01C430B4300BE2018 /* ResumenInterfaceController.swift */,
 				B76963981C42DB5A00BE2018 /* Assets.xcassets */,
 				B769639A1C42DB5A00BE2018 /* Info.plist */,
 			);
@@ -286,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76963AB1C430AA000BE2018 /* TipoMasaInterfaceController.swift in Sources */,
 				B76963741C42DB5A00BE2018 /* ViewController.swift in Sources */,
 				B76963721C42DB5A00BE2018 /* AppDelegate.swift in Sources */,
 			);
@@ -295,8 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76963A91C43096500BE2018 /* DatosPizza.swift in Sources */,
+				B76963AF1C430B2E00BE2018 /* IngredientesInterfaceController.swift in Sources */,
+				B76963B11C430B4300BE2018 /* ResumenInterfaceController.swift in Sources */,
 				B76963971C42DB5A00BE2018 /* ExtensionDelegate.swift in Sources */,
 				B76963951C42DB5A00BE2018 /* InterfaceController.swift in Sources */,
+				B76963AD1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

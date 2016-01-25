@@ -1,6 +1,6 @@
 //
-//  InterfaceController.swift
-//  pizzaParaWatch WatchKit Extension
+//  TipoMasaInterfaceController.swift
+//  pizzaParaWatch
 //
 //  Created by Yolanda Martínez on 1/10/16.
 //  Copyright © 2016 Yolanda Martínez. All rights reserved.
@@ -10,13 +10,12 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class TipoMasaInterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-        
     }
 
     override func willActivate() {
