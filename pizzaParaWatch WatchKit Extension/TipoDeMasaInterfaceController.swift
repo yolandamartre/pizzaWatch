@@ -1,23 +1,21 @@
 //
-//  TipoMasaInterfaceController.swift
+//  TipoDeMasaInterfaceController.swift
 //  pizzaParaWatch
 //
-//  Created by Yolanda Martínez on 1/10/16.
+//  Created by Yolanda Martínez on 1/30/16.
 //  Copyright © 2016 Yolanda Martínez. All rights reserved.
 //
 
 import WatchKit
 import Foundation
 
-class TipoMasaInterfaceController: WKInterfaceController {
-    
-        var tamano : String = ""
-        var tipoMasa : String = ""
 
-    @IBOutlet var valorTipoMasa: WKInterfaceLabel!
+class TipoDeMasaInterfaceController: WKInterfaceController {
     
-    @IBAction func cambiaTipoMasa(value: Float) {
-        
+    var tamano : String = ""
+    var tipoMasa : String = ""
+
+    @IBAction func botonSlider(value: Float) {
         switch value
         {
         case 0 :
@@ -27,15 +25,10 @@ class TipoMasaInterfaceController: WKInterfaceController {
         default : tipoMasa = "Escoge tipo Masa"
         }
         
-    valorTipoMasa.setText(tipoMasa)
-        
+        lbTipoMasa.setText(tipoMasa)
     }
     
-    @IBAction func botonSiguiente() {
-        let datos = DatosPizza(tam: tamano, tipM: tipoMasa, tipQ: "", ing: "")
-        pushControllerWithName("tipoQueso", context: datos)
-    }
-    
+    @IBOutlet var lbTipoMasa: WKInterfaceLabel!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -44,6 +37,11 @@ class TipoMasaInterfaceController: WKInterfaceController {
         tamano = c.tamano
     }
 
+    @IBAction func botonSiguiente() {
+        let datos = DatosPizza(tam: tamano, tipM: tipoMasa, tipQ: "", ing: "")
+        pushControllerWithName("tipoQueso", context: datos)
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

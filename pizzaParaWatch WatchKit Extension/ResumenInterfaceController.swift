@@ -11,11 +11,16 @@ import Foundation
 
 
 class ResumenInterfaceController: WKInterfaceController {
+    @IBOutlet var valorResumen: WKInterfaceLabel!
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        // recupero lo que fue puesto en el contexto
+        let c = context as! DatosPizza
+        valorResumen.setText("tamaño \(c.tamano) \n tipo de masa \(c.tipoMasa) \n tipo de queso \(c.tipoQueso) \n ingredientes \(c.ingredientes)")
+        
     }
 
     override func willActivate() {

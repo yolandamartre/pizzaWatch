@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71CE7F71C5DD8DD0038A89A /* TipoDeMasaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71CE7F61C5DD8DD0038A89A /* TipoDeMasaInterfaceController.swift */; };
 		B76963721C42DB5A00BE2018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963711C42DB5A00BE2018 /* AppDelegate.swift */; };
 		B76963741C42DB5A00BE2018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963731C42DB5A00BE2018 /* ViewController.swift */; };
 		B76963771C42DB5A00BE2018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76963751C42DB5A00BE2018 /* Main.storyboard */; };
@@ -20,7 +21,6 @@
 		B76963971C42DB5A00BE2018 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963961C42DB5A00BE2018 /* ExtensionDelegate.swift */; };
 		B76963991C42DB5A00BE2018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76963981C42DB5A00BE2018 /* Assets.xcassets */; };
 		B76963A91C43096500BE2018 /* DatosPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963A81C43096500BE2018 /* DatosPizza.swift */; };
-		B76963AB1C430AA000BE2018 /* TipoMasaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963AA1C430A9F00BE2018 /* TipoMasaInterfaceController.swift */; };
 		B76963AD1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963AC1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift */; };
 		B76963AF1C430B2E00BE2018 /* IngredientesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963AE1C430B2E00BE2018 /* IngredientesInterfaceController.swift */; };
 		B76963B11C430B4300BE2018 /* ResumenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76963B01C430B4300BE2018 /* ResumenInterfaceController.swift */; };
@@ -69,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B71CE7F61C5DD8DD0038A89A /* TipoDeMasaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoDeMasaInterfaceController.swift; sourceTree = "<group>"; };
 		B769636E1C42DB5A00BE2018 /* pizzaParaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pizzaParaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76963711C42DB5A00BE2018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B76963731C42DB5A00BE2018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		B76963981C42DB5A00BE2018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B769639A1C42DB5A00BE2018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76963A81C43096500BE2018 /* DatosPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosPizza.swift; sourceTree = "<group>"; };
-		B76963AA1C430A9F00BE2018 /* TipoMasaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TipoMasaInterfaceController.swift; path = "../pizzaParaWatch WatchKit App/TipoMasaInterfaceController.swift"; sourceTree = "<group>"; };
 		B76963AC1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoQuesoInterfaceController.swift; sourceTree = "<group>"; };
 		B76963AE1C430B2E00BE2018 /* IngredientesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesInterfaceController.swift; sourceTree = "<group>"; };
 		B76963B01C430B4300BE2018 /* ResumenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenInterfaceController.swift; sourceTree = "<group>"; };
@@ -159,12 +159,12 @@
 				B76963941C42DB5A00BE2018 /* InterfaceController.swift */,
 				B76963A81C43096500BE2018 /* DatosPizza.swift */,
 				B76963961C42DB5A00BE2018 /* ExtensionDelegate.swift */,
-				B76963AA1C430A9F00BE2018 /* TipoMasaInterfaceController.swift */,
 				B76963AC1C430B1B00BE2018 /* TipoQuesoInterfaceController.swift */,
 				B76963AE1C430B2E00BE2018 /* IngredientesInterfaceController.swift */,
 				B76963B01C430B4300BE2018 /* ResumenInterfaceController.swift */,
 				B76963981C42DB5A00BE2018 /* Assets.xcassets */,
 				B769639A1C42DB5A00BE2018 /* Info.plist */,
+				B71CE7F61C5DD8DD0038A89A /* TipoDeMasaInterfaceController.swift */,
 			);
 			path = "pizzaParaWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -301,7 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B76963AB1C430AA000BE2018 /* TipoMasaInterfaceController.swift in Sources */,
 				B76963741C42DB5A00BE2018 /* ViewController.swift in Sources */,
 				B76963721C42DB5A00BE2018 /* AppDelegate.swift in Sources */,
 			);
@@ -311,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71CE7F71C5DD8DD0038A89A /* TipoDeMasaInterfaceController.swift in Sources */,
 				B76963A91C43096500BE2018 /* DatosPizza.swift in Sources */,
 				B76963AF1C430B2E00BE2018 /* IngredientesInterfaceController.swift in Sources */,
 				B76963B11C430B4300BE2018 /* ResumenInterfaceController.swift in Sources */,
@@ -545,6 +545,7 @@
 				B769639F1C42DB5A00BE2018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B76963A11C42DB5A00BE2018 /* Build configuration list for PBXNativeTarget "pizzaParaWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +554,7 @@
 				B76963A31C42DB5A00BE2018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B76963A51C42DB5A00BE2018 /* Build configuration list for PBXNativeTarget "pizzaParaWatch" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +563,7 @@
 				B76963A71C42DB5A00BE2018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,36 +10,118 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="pizzaParaWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="Rod-H2-N0J"/>
+                        <label alignment="left" text="Tamaño" id="Rod-H2-N0J"/>
+                        <slider width="1" alignment="left" maximum="3" steps="3" id="JYt-g9-Xq4">
+                            <connections>
+                                <action selector="cambiaValorTamano:" destination="AgC-eL-Hgc" id="fjx-yX-1i1"/>
+                            </connections>
+                        </slider>
+                        <label alignment="left" text="Elige un Tamaño" id="kAj-GX-NfW"/>
+                        <button width="1" alignment="left" title="Siguiente" id="ldX-5S-fDi">
+                            <connections>
+                                <action selector="botonSiguiente" destination="AgC-eL-Hgc" id="2iW-X2-Ruo"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="lbTamano" destination="kAj-GX-NfW" id="mF0-7F-qk2"/>
+                    </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="299" y="273"/>
         </scene>
-        <!--Tipo Masa Interface Controller-->
+        <!--tipoMasa-->
         <scene sceneID="rd8-71-p5r">
             <objects>
-                <controller id="rzf-V3-Bnr" customClass="TipoMasaInterfaceController" customModule="pizzaParaWatch"/>
+                <controller identifier="tipoMasa" id="rzf-V3-Bnr" customClass="TipoDeMasaInterfaceController" customModule="pizzaParaWatch">
+                    <items>
+                        <label alignment="left" text="Tipo de Masa" id="Dcn-Qh-NcX"/>
+                        <slider width="1" alignment="left" maximum="3" steps="3" id="Jwh-et-r8H">
+                            <connections>
+                                <action selector="botonSlider:" destination="rzf-V3-Bnr" id="VKs-i2-oxL"/>
+                            </connections>
+                        </slider>
+                        <label alignment="left" text="Escoge tipo Masa" id="sXD-yJ-rzQ"/>
+                        <button width="1" alignment="left" title="Siguiente" id="84S-kL-I0k">
+                            <connections>
+                                <action selector="botonSiguiente" destination="rzf-V3-Bnr" id="LH3-HY-nRO"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="lbTipoMasa" destination="sXD-yJ-rzQ" id="y3T-x8-tHf"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="492" y="273"/>
         </scene>
-        <!--Tipo Queso Interface Controller-->
+        <!--tipoQueso-->
         <scene sceneID="rXv-X4-nRS">
             <objects>
-                <controller id="2Gx-gD-n67" customClass="TipoQuesoInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension"/>
+                <controller identifier="tipoQueso" id="2Gx-gD-n67" customClass="TipoQuesoInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Tipo de Queso" id="84K-Kg-MpR"/>
+                        <slider width="1" alignment="left" maximum="4" steps="4" id="e6F-Qv-3ki">
+                            <connections>
+                                <action selector="cambioTipoQueso:" destination="2Gx-gD-n67" id="zH1-DD-7tJ"/>
+                            </connections>
+                        </slider>
+                        <label alignment="left" text="Escoge tipo Queso" id="ICm-ZG-22v"/>
+                        <button width="1" alignment="left" title="Siguiente" id="koG-EL-OjU">
+                            <connections>
+                                <action selector="botonSiguiente" destination="2Gx-gD-n67" id="7Mh-pJ-ViX"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="valorTipoQueso" destination="ICm-ZG-22v" id="CkL-4I-rdR"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="657" y="273"/>
         </scene>
-        <!--Ingredientes Interface Controller-->
+        <!--ingredientes-->
         <scene sceneID="RHw-3O-pku">
             <objects>
-                <controller id="dzm-8J-zIy" customClass="IngredientesInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension"/>
+                <controller identifier="ingredientes" id="dzm-8J-zIy" customClass="IngredientesInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Ingredientes" id="fQe-d6-Rth"/>
+                        <switch width="1" alignment="left" value="YES" title="Peperoni" id="SRn-MA-hAc"/>
+                        <switch width="1" alignment="left" value="YES" title="Jamón" id="CeN-qx-VqB"/>
+                        <switch width="1" alignment="left" value="YES" title="Pavo" id="qna-7s-L3d"/>
+                        <switch width="1" alignment="left" value="YES" title="Salchicha" id="hIr-B9-lZs"/>
+                        <switch width="1" alignment="left" value="YES" title="Aceituna" id="tqc-KQ-xKn"/>
+                        <switch width="1" alignment="left" value="YES" title="Pimiento" id="pex-zs-A3A"/>
+                        <button width="1" alignment="left" title="Siguiente" id="U6J-DV-uio">
+                            <connections>
+                                <action selector="botonSiguiente" destination="dzm-8J-zIy" id="Wvy-LE-a4P"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="switchAceituna" destination="tqc-KQ-xKn" id="5be-WN-pHA"/>
+                        <outlet property="switchJamon" destination="CeN-qx-VqB" id="mw3-4n-5uK"/>
+                        <outlet property="switchPavo" destination="qna-7s-L3d" id="RLZ-Wh-Xae"/>
+                        <outlet property="switchPeperoni" destination="SRn-MA-hAc" id="v0X-ZL-mF2"/>
+                        <outlet property="switchPimiento" destination="pex-zs-A3A" id="xIX-yw-miD"/>
+                        <outlet property="switchSalchicha" destination="hIr-B9-lZs" id="Rp7-hx-Ndw"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="817" y="273"/>
+            <point key="canvasLocation" x="815" y="332"/>
         </scene>
-        <!--Resumen Interface Controller-->
+        <!--resumen-->
         <scene sceneID="F3w-kW-e00">
             <objects>
-                <controller id="PFk-Jq-Wp7" customClass="ResumenInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension"/>
+                <controller identifier="resumen" id="PFk-Jq-Wp7" customClass="ResumenInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="7" id="mMv-AB-3jW"/>
+                        <button width="1" alignment="left" title="Listo" id="gWo-B7-mp3"/>
+                    </items>
+                    <connections>
+                        <outlet property="valorResumen" destination="mMv-AB-3jW" id="vQ6-fx-i2K"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="988" y="273"/>
         </scene>

@@ -11,11 +11,41 @@ import Foundation
 
 
 class TipoQuesoInterfaceController: WKInterfaceController {
-
+ 
+    var tamano : String = ""
+    var tipoMasa : String = ""
+    var tipoQueso : String = ""
+    
+    @IBOutlet var valorTipoQueso: WKInterfaceLabel!
+    
+    @IBAction func cambioTipoQueso(value: Float) {
+        var tipoQ : String = ""
+        
+        switch value
+        {
+        case 0 : tipoQ = "mozzarella"
+        case 1 : tipoQ = "chedar"
+        case 2: tipoQ = "parmesano"
+        case 3: tipoQ = "Sin queso"
+        default : tipoQ = "Escoge tipo Queso"
+        }
+        valorTipoQueso.setText(tipoQ)
+        tipoQueso = tipoQ
+    }
+    
+    @IBAction func botonSiguiente() {
+        let datos = DatosPizza(tam: tamano, tipM: tipoMasa, tipQ: tipoQueso, ing: "")
+        pushControllerWithName("ingredientes", context: datos)
+    }
+    
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        let c = context as! DatosPizza
+        tamano = c.tamano
+        tipoMasa = c.tipoMasa
     }
 
     override func willActivate() {
