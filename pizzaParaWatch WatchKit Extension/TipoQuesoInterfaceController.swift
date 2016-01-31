@@ -23,10 +23,12 @@ class TipoQuesoInterfaceController: WKInterfaceController {
         
         switch value
         {
-        case 0 : tipoQ = "mozzarella"
-        case 1 : tipoQ = "chedar"
-        case 2: tipoQ = "parmesano"
-        case 3: tipoQ = "Sin queso"
+        case 0 : tipoQ = "Escoge tipo Queso"
+        case 1 : tipoQ = "mozzarella"
+        case 2 : tipoQ = "chedar"
+        case 3: tipoQ = "parmesano"
+        case 4: tipoQ = "Sin queso"
+
         default : tipoQ = "Escoge tipo Queso"
         }
         valorTipoQueso.setText(tipoQ)

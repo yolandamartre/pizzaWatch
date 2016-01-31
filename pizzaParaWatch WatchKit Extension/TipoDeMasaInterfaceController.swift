@@ -18,10 +18,11 @@ class TipoDeMasaInterfaceController: WKInterfaceController {
     @IBAction func botonSlider(value: Float) {
         switch value
         {
-        case 0 :
+        case 0: tipoMasa = "Escoge tipo Masa"
+        case 1 :
             tipoMasa = "delgada"
-        case 1 : tipoMasa = "crujiente"
-        case 2: tipoMasa = "gruesa"
+        case 2 : tipoMasa = "crujiente"
+        case 3: tipoMasa = "gruesa"
         default : tipoMasa = "Escoge tipo Masa"
         }
         
@@ -29,6 +30,7 @@ class TipoDeMasaInterfaceController: WKInterfaceController {
     }
     
     @IBOutlet var lbTipoMasa: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

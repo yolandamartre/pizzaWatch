@@ -13,13 +13,23 @@ import Foundation
 class ResumenInterfaceController: WKInterfaceController {
     @IBOutlet var valorResumen: WKInterfaceLabel!
 
+    @IBOutlet var resumenTipoMasa: WKInterfaceLabel!
+    @IBOutlet var resumenTipoQueso: WKInterfaceLabel!
+    
+    @IBOutlet var resumenIngredientes: WKInterfaceLabel!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
         // recupero lo que fue puesto en el contexto
         let c = context as! DatosPizza
-        valorResumen.setText("tamaño \(c.tamano) \n tipo de masa \(c.tipoMasa) \n tipo de queso \(c.tipoQueso) \n ingredientes \(c.ingredientes)")
+        valorResumen.setText("Tamaño: \(c.tamano)")
+        resumenTipoMasa.setText("Tipo de masa: \(c.tipoMasa)")
+        resumenTipoQueso.setText("Tipo de queso: \(c.tipoQueso)")
+        resumenIngredientes.setText(" Ingredientes: \(c.ingredientes)")
+        
+    }
+    @IBAction func listo() {
         
     }
 

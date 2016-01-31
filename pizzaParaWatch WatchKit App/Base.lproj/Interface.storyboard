@@ -33,7 +33,7 @@
         <!--tipoMasa-->
         <scene sceneID="rd8-71-p5r">
             <objects>
-                <controller identifier="tipoMasa" id="rzf-V3-Bnr" customClass="TipoDeMasaInterfaceController" customModule="pizzaParaWatch">
+                <controller identifier="tipoMasa" id="rzf-V3-Bnr" customClass="TipoDeMasaInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Tipo de Masa" id="Dcn-Qh-NcX"/>
                         <slider width="1" alignment="left" maximum="3" steps="3" id="Jwh-et-r8H">
@@ -86,12 +86,36 @@
                 <controller identifier="ingredientes" id="dzm-8J-zIy" customClass="IngredientesInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Ingredientes" id="fQe-d6-Rth"/>
-                        <switch width="1" alignment="left" value="YES" title="Peperoni" id="SRn-MA-hAc"/>
-                        <switch width="1" alignment="left" value="YES" title="Jamón" id="CeN-qx-VqB"/>
-                        <switch width="1" alignment="left" value="YES" title="Pavo" id="qna-7s-L3d"/>
-                        <switch width="1" alignment="left" value="YES" title="Salchicha" id="hIr-B9-lZs"/>
-                        <switch width="1" alignment="left" value="YES" title="Aceituna" id="tqc-KQ-xKn"/>
-                        <switch width="1" alignment="left" value="YES" title="Pimiento" id="pex-zs-A3A"/>
+                        <switch width="1" alignment="left" value="YES" title="Peperoni" id="SRn-MA-hAc">
+                            <connections>
+                                <action selector="movioSwPeperoni:" destination="dzm-8J-zIy" id="gST-OA-ee1"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" value="YES" title="Jamón" id="CeN-qx-VqB">
+                            <connections>
+                                <action selector="movioSwJamon:" destination="dzm-8J-zIy" id="jL3-9e-Sfx"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" value="YES" title="Pavo" id="qna-7s-L3d">
+                            <connections>
+                                <action selector="movioSwPavo:" destination="dzm-8J-zIy" id="6fU-jj-cfM"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" value="YES" title="Salchicha" id="hIr-B9-lZs">
+                            <connections>
+                                <action selector="movioSwSalchicha:" destination="dzm-8J-zIy" id="vZ4-dz-FIr"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" value="YES" title="Aceituna" id="tqc-KQ-xKn">
+                            <connections>
+                                <action selector="movioSwAceituna:" destination="dzm-8J-zIy" id="Jmz-hE-G9R"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" value="YES" title="Pimiento" id="pex-zs-A3A">
+                            <connections>
+                                <action selector="movioSwPimiento:" destination="dzm-8J-zIy" id="a6s-4b-IH1"/>
+                            </connections>
+                        </switch>
                         <button width="1" alignment="left" title="Siguiente" id="U6J-DV-uio">
                             <connections>
                                 <action selector="botonSiguiente" destination="dzm-8J-zIy" id="Wvy-LE-a4P"/>
@@ -99,12 +123,12 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="switchAceituna" destination="tqc-KQ-xKn" id="5be-WN-pHA"/>
-                        <outlet property="switchJamon" destination="CeN-qx-VqB" id="mw3-4n-5uK"/>
-                        <outlet property="switchPavo" destination="qna-7s-L3d" id="RLZ-Wh-Xae"/>
-                        <outlet property="switchPeperoni" destination="SRn-MA-hAc" id="v0X-ZL-mF2"/>
-                        <outlet property="switchPimiento" destination="pex-zs-A3A" id="xIX-yw-miD"/>
-                        <outlet property="switchSalchicha" destination="hIr-B9-lZs" id="Rp7-hx-Ndw"/>
+                        <outlet property="swAceituna" destination="tqc-KQ-xKn" id="bCO-rM-pNb"/>
+                        <outlet property="swJamon" destination="CeN-qx-VqB" id="Lnd-Tl-RcB"/>
+                        <outlet property="swPavo" destination="qna-7s-L3d" id="r4Q-Ud-xzs"/>
+                        <outlet property="swPeperoni" destination="SRn-MA-hAc" id="iOU-Eg-0OJ"/>
+                        <outlet property="swPimiento" destination="pex-zs-A3A" id="AZH-yl-UVA"/>
+                        <outlet property="swSalchicha" destination="hIr-B9-lZs" id="uZL-Am-Asm"/>
                     </connections>
                 </controller>
             </objects>
@@ -115,15 +139,44 @@
             <objects>
                 <controller identifier="resumen" id="PFk-Jq-Wp7" customClass="ResumenInterfaceController" customModule="pizzaParaWatch_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" numberOfLines="7" id="mMv-AB-3jW"/>
-                        <button width="1" alignment="left" title="Listo" id="gWo-B7-mp3"/>
+                        <label width="136" alignment="left" text="Tu Pedido" id="dsS-F8-ywk">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <separator alignment="left" id="xME-U9-9Zb"/>
+                        <label width="136" alignment="left" text="Label" numberOfLines="3" id="mMv-AB-3jW"/>
+                        <separator alignment="left" id="MJa-yi-CNk"/>
+                        <label width="136" alignment="left" text="Label" numberOfLines="3" id="j6T-Gg-FIj"/>
+                        <separator alignment="left" id="m7t-Ko-ciM"/>
+                        <label width="136" alignment="left" text="Label" numberOfLines="3" id="58N-4Q-IUU"/>
+                        <separator alignment="left" id="iod-o1-rNW"/>
+                        <label width="136" alignment="left" text="Label" numberOfLines="7" id="hKB-BS-dRT"/>
+                        <button width="1" alignment="left" title="Listo" id="gWo-B7-mp3">
+                            <connections>
+                                <action selector="listo" destination="PFk-Jq-Wp7" id="htj-2g-Nnc"/>
+                                <segue destination="RHb-0D-MLd" kind="push" id="usJ-hw-MlK"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="resumenIngredientes" destination="hKB-BS-dRT" id="9iv-M7-gHa"/>
+                        <outlet property="resumenTipoMasa" destination="j6T-Gg-FIj" id="exK-PG-snA"/>
+                        <outlet property="resumenTipoQueso" destination="58N-4Q-IUU" id="fgD-FT-g8G"/>
                         <outlet property="valorResumen" destination="mMv-AB-3jW" id="vQ6-fx-i2K"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="988" y="273"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="ib2-Wg-TOM">
+            <objects>
+                <controller id="RHb-0D-MLd">
+                    <items>
+                        <label height="69.5" alignment="left" text="Tu pedido ha sido enviado con exito" numberOfLines="3" id="JAh-RJ-bYH"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1196" y="260"/>
         </scene>
     </scenes>
 </document>

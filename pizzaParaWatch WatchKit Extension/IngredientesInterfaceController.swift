@@ -16,13 +16,24 @@ class IngredientesInterfaceController: WKInterfaceController {
     var tipoMasa : String = ""
     var tipoQueso : String = ""
     var ingredientes : String = ""
-
-    @IBOutlet var switchPeperoni: WKInterfaceSwitch!
-    @IBOutlet var switchJamon: WKInterfaceSwitch!
-    @IBOutlet var switchPavo: WKInterfaceSwitch!
-    @IBOutlet var switchSalchicha: WKInterfaceSwitch!
-    @IBOutlet var switchAceituna: WKInterfaceSwitch!
-    @IBOutlet var switchPimiento: WKInterfaceSwitch!
+    var switchPeperoni : Bool = false
+    var switchJamon : Bool = false
+    var switchPavo : Bool = false
+    var switchSalchicha : Bool = false
+    var switchAceituna : Bool = false
+    var switchPimiento : Bool = false
+    
+    @IBOutlet var swPeperoni: WKInterfaceSwitch!
+    
+    @IBOutlet var swJamon: WKInterfaceSwitch!
+    
+    @IBOutlet var swPavo: WKInterfaceSwitch!
+    
+    @IBOutlet var swSalchicha: WKInterfaceSwitch!
+    
+    @IBOutlet var swAceituna: WKInterfaceSwitch!
+    
+    @IBOutlet var swPimiento: WKInterfaceSwitch!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -32,25 +43,69 @@ class IngredientesInterfaceController: WKInterfaceController {
         tamano = c.tamano
         tipoMasa = c.tipoMasa
         tipoQueso = c.tipoQueso
+        swPeperoni.setOn(false)
+        swJamon.setOn(false)
+        swPavo.setOn(false)
+        swSalchicha.setOn(false)
+        swAceituna.setOn(false)
+        swPimiento.setOn(false)
     }
 
     @IBAction func botonSiguiente() {
         if switchPeperoni == true
         {
-            ingredientes += "Peperoni"
+            ingredientes += "Peperoni\n"
         }
         if switchJamon == true
         {
-            ingredientes += "Jamon"
+            ingredientes += "Jamon\n"
         }
-
+        if switchPavo == true
+        {
+            ingredientes += "Pavo\n"
+        }
+        if switchSalchicha == true
+        {
+            ingredientes += "Salchicha\n"
+        }
+        if switchAceituna == true
+        {
+            ingredientes += "Aceituna\n"
+        }
+        if switchPimiento == true
+        {
+            ingredientes += "Pimiento\n"
+        }
         
         
         let datos = DatosPizza(tam: tamano, tipM: tipoMasa, tipQ: tipoQueso, ing: ingredientes)
-        pushControllerWithName("ingredientes", context: datos)
+        pushControllerWithName("resumen", context: datos)
         
     }
     
+    @IBAction func movioSwPeperoni(value: Bool) {
+        switchPeperoni = !switchPeperoni
+    }
+    
+    @IBAction func movioSwJamon(value: Bool) {
+        switchJamon = !switchJamon
+    }
+    
+    @IBAction func movioSwPavo(value: Bool) {
+        switchPavo = !switchPavo
+    }
+    
+    @IBAction func movioSwSalchicha(value: Bool) {
+        switchSalchicha = !switchSalchicha
+    }
+    
+    @IBAction func movioSwAceituna(value: Bool) {
+        switchAceituna = !switchAceituna
+    }
+    
+    @IBAction func movioSwPimiento(value: Bool) {
+        switchPimiento = !switchPimiento
+    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
